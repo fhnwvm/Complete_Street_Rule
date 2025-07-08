@@ -20,7 +20,7 @@ In Switzerland, the bikelanes side lines can be continuous or dashed. Same as th
 
 |Pictogram/Line White|Pictogram/Line Yellow|Parameters|
 |--------------|-------------|----------|
-|![image](images/Bike_Picto_on_white.jpg)|![image](images/Bike_Picto_on.jpg)|![image](images/Bike_Picto_Line_Color.jpg)
+|![image](images/Bike_Picto_on_white.jpg)|![image](images/Bike_Picto_on.jpg)|![image](images/Bike_Picto_Line_color.jpg)
 
 - 273-274: ``Ground_Line_Color``(new attribut), enable to control the color of the spaces in dashed bikelane side lines. The color is per default the same as the color of the bikelane (``Bike_Lane_Color`` -> Background), but can be changed to between **green** (grey), **black**, **red**, **blue**, **yellow** and **white**.
 - 2022-2051: ``BikeLaneLines`` defined different cases depending on the bikelane color (``Bike_Lane_Color``). Depending on the ``Bike_Lane_Color``, the lines colors will have the color ``Bike_Lane_Pictograme_Line_color`` and the asphalt will be painted with the ``Ground_Line_Color``.
@@ -56,7 +56,7 @@ In order to adapt the curb height (in the case the curb height has not the same 
 
 |Bikelane 0.0 m|Bikelane 0.1 m|Parameters|
 |--------------|-------------|----------|
-|![image](images/Bike_lane_00.jpg)|![image](images/Bike_Lane_01.jpg)|![image](images/Bike_Lane_height_params.jpg)
+|![image](images/Bike_Lane_00.jpg)|![image](images/Bike_Lane_01.jpg)|![image](images/Bike_Lane_height_params.jpg)
 
 ### Road-Sidewalk Distance
 Between the road and the sidewalk, there is a little space (0.01 meters). This distance is only visible when the bikelane on the road is higher than 0.0 meters. In order the delete this distance, on line 850, the attribut ``Actual_Lane_Width`` where changed, the **-.01** where deleted from the value.
@@ -67,4 +67,4 @@ For simples one directional bikelane on the sidewalk, it's important that the bi
     - If the ``sidewalkSide`` is **Right** (``BikeLaneSection``'s direction is **0**), the sidewalk direction is set to **-1**.
     - If the ``sidewalkSide`` is **Left** (``BikeLaneSection``'s direction is **2**), the sidewalk direction is set to **1**.
 
-![image](images/Bike_Lane_both_Sides.jpg)
+![image](images/Bike_Lane_Both_Sides.jpg)
