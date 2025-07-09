@@ -13,6 +13,7 @@ On sufficiently wide sidewalks, the **bike pictogram**  is not always represente
 
 |Pictogram ON|Pictogram OFF|Parameters|
 |--------------|-------------|----------|
+|``Bike_Pictogram`` = on|``Bike_Pictogram``= off||
 |![image](images/Bike_Picto_on.jpg)|![image](images/Bike_Picto_off.jpg)|![image](images/Bike_Picto.jpg)
 
 In Switzerland, bike lane separators can be continuous or dashed. Like the pictograms, they are typically **yellow**. To represent this in CityEngine, the following changes were made on line:
@@ -20,6 +21,7 @@ In Switzerland, bike lane separators can be continuous or dashed. Like the picto
 
 |Pictogram and separator white|Pictogram and separator yellow|Parameters|
 |--------------|-------------|----------|
+|``Bike_Lane_Pictogram_Line_Color`` = White|``Bike_Lane_Pictogram_Line_Color`` = Yellow|
 |![image](images/Bike_Picto_white.jpg)|![image](images/Bike_Picto_yellow.jpg)|![image](images/Bike_Picto_Line_color.jpg)
 
 - 273-274: ``Ground_Line_Color``(new attribut) — controls the background color of dashed bike lane separators. Defaults to the same value as ``Bike_Lane_Color`` but can be changed to **green** (grey), **black**, **red**, **blue**, **yellow** and **white**.
@@ -49,6 +51,7 @@ In Switzerland, bus lanes are marked with **yellow** pictograms and **yellow** c
 
 |Bus lane white|Bus lane yellow|Bus and bike lane|Parameters|
 |--------------|-------------|-------------|----------|
+|``Bus_Lane_Pictogram_Line_Color`` = White <br> ``Bike_Pictogram`` = off|``Bus_Lane_Pictogram_Line_Color`` = Yellow <br> ``Bike_Pictogram`` = off|``Bus_Lane_Pictogram_Line_Color`` = Yellow <br> ``Bike_Pictogram`` = on <br> ``Bike_Lane_Pictogram_Line_Color`` = Yellow|
 |![image](images/Bus_Lane_white.jpg)|![image](images/Bus_Lane_yellow.jpg)|![image](images/Bus_Lane_bike.jpg)|![image](images/Bus_Lane_params.jpg)|
 
 ### Seperated bike lane
@@ -64,13 +67,14 @@ To adjust the curb height (when it differs from the sidewalk height):
 
 This allows the curb to be set lower than the sidewalk, at the same height as the bike lane. Previously, curb height was always 0.1 meters, matching the sidewalk.
 
-|Bikelane 0.0 m <br> Curb 0.1 m|Bikelane 0.1 m <br> Curb 0.1 m|Bikelane 0.05 m <br> Curb 0.05 m|Parameters|
+|Original rule case|Normal curb height with higher bike lane|Lower curb and higher bike lane|Parameters|
 |--------------|-------------|-------------|----------|
+|``Bike_Lane_Height`` = 0.0 <br> ``Curb_Height`` = 0.1|``Bike_Lane_Height`` = 0.1 <br> ``Curb_Height`` = 0.1|``Bike_Lane_Height`` = 0.05 <br> ``Curb_Height`` = 0.05|
 |![image](images/Bike_Lane_00.jpg)|![image](images/Bike_Lane_01.jpg)|![image](images/Bike_Lane_005.jpg)|![image](images/Bike_Lane_height_params.jpg)|
 
 ### Road-sidewalk distance
 There is a small space (0.01 meters) between the road and the sidewalk, which becomes visible only when the bike lane is raised above 0.0 meters. To remove this gap, on line 850, the attribute ``Actual_Lane_Width`` was modified: the **-.01** offset was removed.
 
-|0.01 m space (original rule)|no more space (FHNW rule)|
+|0.01 m space (original rule)|No more space (FHNW rule)|
 |----------------------------|-------------------------|
 |![image](images/Bike_Lane_space.jpg)|![image](images/Bike_Lane_no_space.jpg)|
