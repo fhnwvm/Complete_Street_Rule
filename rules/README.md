@@ -70,3 +70,7 @@ This allows the curb to be set lower than the sidewalk, at the same height as th
 
 ### Road-sidewalk distance
 There is a small space (0.01 meters) between the road and the sidewalk, which becomes visible only when the bike lane is raised above 0.0 meters. To remove this gap, on line 850, the attribute ``Actual_Lane_Width`` was modified: the **-.01** offset was removed.
+
+|0.01 m space (original rule)|no more space (FHNW rule)|
+|----------------------------|-------------------------|
+|![image](images/Bike_Lane_space.jpg)|![image](images/Bike_Lane_no_space.jpg)|
