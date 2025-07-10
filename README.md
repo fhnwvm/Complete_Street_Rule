@@ -3,6 +3,8 @@ The Complete Street Rule is a scenario oriented design tool intended to enable u
 
 This is an updated repository for a modified version of the ESRI Complete Street rule by the original rule author.
 
+A new version of the Complete Street rule is now available under ``rules/Street_Complete_FHNW.cga``; it reflects Swiss road infrastructure, including yellow road markings and other local characteristics.
+
 ## Scenario Oriented Design Tool
 
 ![alt tag](/images/CSRuleCEDemo.gif)
